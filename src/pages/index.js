@@ -1,5 +1,4 @@
 import { supabase } from "../../lib/supabaseClient";
-
 import { useState, useEffect, use } from "react";
 
 export default function Home({ data }) {
@@ -22,7 +21,7 @@ export default function Home({ data }) {
           <div className="max-w-md">
             <h1 className="text-xl font-bold mb-24">{affirmation.text}</h1>
 
-            <button className="btn btn-primary" onClick={getNewAffirmation}>
+            <button className="btn" onClick={getNewAffirmation}>
               Get new affirmation
             </button>
           </div>
