@@ -1,4 +1,4 @@
-import Link from "next/link";
+import Link from 'next/link';
 
 export default function Navbar() {
   return (
@@ -26,31 +26,31 @@ export default function Navbar() {
               tabIndex={0}
               className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52"
             >
-              <li>
+              {/* <li>
                 <Link href="/">Home</Link>
-              </li>
+              </li> */}
 
-              <li>
+              {/* <li>
                 <Link href="add-affirmation">Add affirmation</Link>
-              </li>
+              </li> */}
             </ul>
           </div>
           <a className="btn btn-ghost normal-case text-xl">iAffirm</a>
         </div>
         <div className="navbar-center hidden lg:flex">
-          <ul className="menu menu-horizontal px-1">
-            <li>
+          <ul           {/* <li>
               <Link href="/">Home</Link>
-            </li>
+            </li>className="menu menu-horizontal px-1">
+   */}
 
-            <li>
+            {/* <li>
               <Link href="add-affirmation">Add affirmation</Link>
-            </li>
+            </li> */}
           </ul>
         </div>
-        <div className="navbar-end">
+        {/* <div className="navbar-end">
           <a className="btn">Login</a>
-        </div>
+        </div> */}
       </nav>
     </>
   );
