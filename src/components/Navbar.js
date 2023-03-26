@@ -38,10 +38,10 @@ export default function Navbar() {
           <a className="btn btn-ghost normal-case text-xl">iAffirm</a>
         </div>
         <div className="navbar-center hidden lg:flex">
-          <ul           {/* <li>
+          <ul className="menu menu-horizontal px-1">
+            {/* <li>
               <Link href="/">Home</Link>
-            </li>className="menu menu-horizontal px-1">
-   */}
+            </li> */}
 
             {/* <li>
               <Link href="add-affirmation">Add affirmation</Link>
