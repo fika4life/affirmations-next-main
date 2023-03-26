@@ -1,8 +1,8 @@
-import { supabase } from "../../lib/supabaseClient";
-import { useState, useEffect, use } from "react";
+import { supabase } from '../../lib/supabaseClient';
+import { useState, useEffect, use } from 'react';
 
 export default function Home({ data }) {
-  const [affirmation, setAffirmation] = useState("");
+  const [affirmation, setAffirmation] = useState('');
   const [affirmations, setAffirmations] = useState(data);
 
   useEffect(() => {
@@ -10,9 +10,13 @@ export default function Home({ data }) {
   });
 
   const getNewAffirmation = () => {
-    const nrAffirmations = affirmations.length;
-    const randomNumber = Math.floor(Math.random() * nrAffirmations);
-    setAffirmation(affirmations[randomNumber]);
+    if (affirmations) {
+      const nrAffirmations = affirmations.length;
+      const randomNumber = Math.floor(Math.random() * nrAffirmations);
+      setAffirmation(affirmations[randomNumber]);
+    } else {
+      setAffirmation({ text: 'Oops sorry, we are having database problems' });
+    }
   };
   return (
     <>
@@ -32,9 +36,9 @@ export default function Home({ data }) {
 }
 
 export async function getServerSideProps() {
-  const { data } = await supabase.from("affirmations").select();
+  const { data } = await supabase.from('affirmations').select();
 
   return {
-    props: { data }, // will be passed to the page component as props
+    props: { data } // will be passed to the page component as props
   };
 }
